@@ -36,7 +36,12 @@
 		/* STEP 7: Send the request with the send() method */
 		request.send();
 
-
+		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
+		request.onload = function() {
+			var iScreamTopFlavors = request.response;
+			populateHeader(iScreamTopFlavors);
+			showHeroes(iScreamTopFlavors);
+		}
 
 		// Next, open up XXXXX.html and we will…
 
