@@ -11,7 +11,7 @@
 <body>
 	<!-- STEP 1: Build out a HEADER and a SECTION element -->
 	<header>
-		<h1>I Scream Inc.</h1>
+
 	</header>
 	<section>
 
@@ -38,10 +38,21 @@
 
 		/* STEP 8: Add an event handler that listens for the onload event of the JSON file/object */
 		request.onload = function() {
-			var iScreamTopFlavors = request.response;
-			console.log(iScreamTopFlavors);
-			//populateHeader(iScreamTopFlavors);
-			//showHeroes(iScreamTopFlavors);
+			var iScreamInc = request.response;
+			console.log(iScreamInc);
+			populateHeader(iScreamInc);
+			showTopFlavors(iScreamInc);
+		}
+
+		/* STEP 9: Build out the populateHeader() function */
+		function populateHeader(jsonObj) {
+		  var myH1 = document.createElement('h1');
+		  myH1.textContent = jsonObj['companyName'];
+		  header.appendChild(myH1);
+
+		  var myPara = document.createElement('p');
+		  myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+		  header.appendChild(myPara);
 		}
 
 		// Next, open up XXXXX.html and we will…
