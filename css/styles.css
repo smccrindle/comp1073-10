@@ -29,10 +29,11 @@ header p {
 section {
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 5rem;
 }
 section article {
-	outline: 1px solid grey;
-	box-shadow: 0 5px 5px grey;
+	border: 1px solid black;
+	box-shadow: 0 2px 14px grey;
 	padding: 2.5%;
 	width: 25%
 }
