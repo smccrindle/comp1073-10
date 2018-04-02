@@ -32,7 +32,10 @@ section {
 section article {
 	box-shadow: 0 5px 5px grey;
 }
-
+article image {
+	display: block;
+	height: 90px;
+}
 section p {
   margin: 5px 0;
 }
