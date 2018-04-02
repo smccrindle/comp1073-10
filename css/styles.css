@@ -33,6 +33,7 @@ section {
 section article {
 	box-shadow: 0 5px 5px grey;
 	padding: 1rem;
+	width: 30%
 }
 article img {
 	display: block;
