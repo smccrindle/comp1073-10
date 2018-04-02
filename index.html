@@ -46,15 +46,51 @@
 
 		/* STEP 9: Build out the populateHeader() function */
 		function populateHeader(jsonObj) {
-		  var myH1 = document.createElement('h1');
+		  var headerH1 = document.createElement('h1');
 		  myH1.textContent = jsonObj['companyName'];
-		  header.appendChild(myH1);
+		  header.appendChild(headerH1);
 
-		  var myPara = document.createElement('p');
+		  var headerPara = document.createElement('p');
 		  myPara.textContent = 'Head Office: ' + jsonObj['headOffice'] + ' | Est. ' + jsonObj['established'];
-		  header.appendChild(myPara);
+		  header.appendChild(headerPara);
 		}
 
+		/* STEP 10a: Assemble the showTopFlavors() function */
+		function showTopFlavors(jsonObj) {
+			// STEP 10b: Bind the JSON topFlavors object to a var
+			var topFlavors = jsonObj['topFlavors'];
+			// STEP 10c: Loop through the topFlavors object
+			for (var i = 0; i < topFlavors.length; i++) {
+				// STEP 10d: build HTML elements for the content
+				var article = document.createElement('article');
+				var h2 = document.createElement('h2');
+				var image = document.createElement('img');
+				var p1 = document.createElement('p');
+				var p2 = document.createElement('p');
+				var list = document.createElement('ul');
+				// STEP 10e: Set the textContent property for each of the above elements (except the UL), based on the JSON content
+				h2.textContent = topFlavors[i].name;
+				image.setAttribute('src', 'images/' + topFlavors[i].image);
+				image.setAttribute('alt', topFlavors[i].name);
+				p1.textContent = 'dessert type: ' + topFlavors[i].type;
+				p2.textContent = 'calories: ' + topFlavors[i].calories;
+				// STEP 10f: Build a loop for the ingredients array in the JSON
+				var ingredients = topFlavors[i].ingredients;
+				for (var j = 0; j < ingredients.length; j++) {
+					var listItem = document.createElement('li');
+					listItem.textContent = ingredients[j];
+					list.appendChild(listItem);
+				}
+				// STEP 10g: Append each of the above HTML elements to the ARTICLE element
+				article.appendChild(h2);
+				article.appendChild(img);
+				article.appendChild(p1);
+				article.appendChild(p2);
+				article.appendChild(list);
+				// STEP 10h: Append each complete ARTICLE element to the SECTION element
+				section.appendChild(article);
+			}
+		}
 		// Next, open up XXXXX.html and we will…
 
 		// This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
