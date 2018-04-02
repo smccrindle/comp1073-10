@@ -27,10 +27,10 @@ header p {
 }
 
 /* section styles */
-
+section {
+	display: flex;
+}
 section article {
-  width: 33%;
-  float: left;
 	box-shadow: 0 5px 5px grey;
 }
 
@@ -44,6 +44,5 @@ section ul {
 
 h2 {
   font-size: 2.5rem;
-  letter-spacing: -5px;
   margin-bottom: 10px;
 }
