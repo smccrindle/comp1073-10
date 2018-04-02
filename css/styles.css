@@ -31,7 +31,8 @@ section {
 	justify-content: space-between;
 }
 section article {
-	box-shadow: 0 5px 5px 10px grey;
+	outline: 1px solid grey;
+	box-shadow: 0 5px 5px grey;
 	padding: 2.5%;
 	width: 25%
 }
