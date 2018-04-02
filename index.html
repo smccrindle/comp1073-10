@@ -47,11 +47,11 @@
 		/* STEP 9: Build out the populateHeader() function */
 		function populateHeader(jsonObj) {
 		  var headerH1 = document.createElement('h1');
-		  myH1.textContent = jsonObj['companyName'];
+		  headerH1.textContent = jsonObj['companyName'];
 		  header.appendChild(headerH1);
 
 		  var headerPara = document.createElement('p');
-		  myPara.textContent = 'Head Office: ' + jsonObj['headOffice'] + ' | Est. ' + jsonObj['established'];
+		  headerPara.textContent = 'Head Office: ' + jsonObj['headOffice'] + ' | Est. ' + jsonObj['established'];
 		  header.appendChild(headerPara);
 		}
 
