@@ -33,9 +33,10 @@ section article {
 	box-shadow: 0 5px 5px grey;
 	padding: 1rem;
 }
-article image {
+article img {
 	display: block;
-	height: 90px;
+	height: 150px;
+	width: 90px;
 }
 section p {
   margin: 5px 0;
