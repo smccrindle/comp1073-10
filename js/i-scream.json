@@ -36,6 +36,27 @@
         "candy sprinkles"
       ],
       "image": "strawberry-sprinkle.svg"
+    },
+		{
+      "name": "Pistachio Punch",
+      "calories": 450,
+      "type": "ice cream",
+      "ingredients": [
+        "toasted pistachios",
+        "smarties"
+      ],
+      "image": "ice-cream-xtra1.svg"
+    },
+		{
+      "name": "Cookie Choco-Chip",
+      "calories": 425,
+      "type": "ice cream",
+      "ingredients": [
+        "organic chocolate chips",
+        "double cream",
+        "cookie dough"
+      ],
+      "image": "ice-cream-xtra2.svg"
     }
   ]
 }
